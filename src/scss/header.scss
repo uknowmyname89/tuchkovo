@@ -1,0 +1,149 @@
+.inner{
+  .header{
+
+  }
+}
+.main{
+  .header{
+    padding-bottom: 10rem;
+    margin-bottom: -9.5rem;
+  }
+}
+.header{
+  padding: 0rem 0;
+  background: #fff;
+  .navbar-toggler{
+    display: none;
+  }
+  &__logo{
+    max-width: 100%;
+  }
+  .navbar{
+    padding: 0;
+    justify-content: flex-start;
+    margin-left: -10px;
+  }
+  .nav-item{
+    position: relative;
+    .nav-link{
+      color: $c-black;
+      text-decoration: underline;
+      @extend %anim;
+      padding: 0.2rem 0.5rem 0.3rem 0.5rem;
+      font-size: $txt_14px;
+      font-weight: 300;
+      &:hover{
+        color: $c-orange;
+      }
+    }
+    &.active, &.show {
+      .nav-link {
+        color: $c-orange;
+        text-decoration: none;
+      }
+    }
+    .dropdown-toggle::after {
+      font-family: 'icomoon';
+      font-size: 5.5px;
+      font-style: normal;
+      content: "\e903";
+      border: 0;
+      margin-left: 0.3rem;
+    }
+    .dropdown-item {
+      padding: 0.4rem 0.5rem;
+      text-decoration: none;
+      font-size: $txt_13px;
+      color: #fff;
+      &.active, &:active, &:hover {
+        background: $c-orange;
+        color: $c-black;
+      }
+
+    }
+    .dropdown-menu {
+      padding: 0;
+      border-radius: 0;
+      border: 0px;
+      background: $c-orange;
+    }
+  }
+}
+@media(max-width:1442px) {
+  .header{
+    .last-block{
+      display: none;
+    }
+  }
+}
+@media(max-width:1209px) {
+  .header{
+    &__logo{
+      margin: 0 0 1rem!important;
+      max-width: 16rem;
+    }
+  }
+}
+@media(max-width:991px) {
+  .main{
+    .header{
+      margin-bottom: -8.5rem;
+    }
+  }
+  .header{
+    &__logo{
+      margin: 0rem auto 1rem;
+    }
+    .navbar-toggler{
+      display: flex;
+      &-icon {
+        background-image: url($path-assets + '/vectors/menu.svg');
+        background-size: 1rem;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    .row-menu{
+      flex-direction: column-reverse;
+    }
+    .navbar{
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      margin: 1rem 0 0 0 !important;
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0;
+      background: $c-orange;
+      align-items: baseline;
+      .nav-link{
+        border-radius: 0!important;
+        border: 0!important;
+        margin: 0.4rem 0;
+      }
+    }
+
+    .navbar-collapse{
+      border-top: 1px solid #000;
+      padding: 0.5rem 0;
+      width: 100%;
+      margin-bottom: 0!important;
+      margin-top: 8px;
+      .navbar-nav {
+        margin-left: 0!important;
+        .active a, .show a{
+          color: #fff!important;
+        }
+      }
+    }
+    .favor-block{
+      position: absolute;
+      left: 0;
+      bottom: 0.5rem;
+    }
+    .skype-block{
+      position: absolute;
+      right: 0;
+      bottom: 0.5rem;
+    }
+  }
+}

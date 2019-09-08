@@ -1,0 +1,34 @@
+.pagination{
+  justify-content:  start;
+  margin-bottom: 3rem;
+  align-items: center;
+  .page-item{
+    margin: 0.2rem;
+    @extend %anim;
+    &:hover, &.active{
+      background: $c-orange;
+    }
+    .page-link{
+      text-decoration: none;
+      background: transparent;
+      border: 0;
+      padding: 0.2rem 0.5rem;
+      outline: none;
+      box-shadow: none;
+      color: $c-black;
+      font-weight: bold;
+    }
+  }
+  &__start{
+    &:after{
+      content: "«";
+      font-size: 1.2rem;
+    }
+  }
+  &__end{
+    &:after{
+      content: "»";
+      font-size: 1.2rem;
+    }
+  }
+}

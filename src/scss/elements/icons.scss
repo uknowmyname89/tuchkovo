@@ -1,0 +1,21 @@
+$icons: (
+  ('ic1' '\e900' 1rem)
+  ('ic2' '\e901' 1rem)
+  ('ic3' '\e902' 1rem)
+  ('arrd' '\e903' 1rem)
+);
+
+.icon {
+  font-size: 1rem;
+  font-style: normal;
+
+  @each $icon in $icons {
+    &_#{nth($icon, 1)} {
+      font-family: 'icomoon';
+      font-size: nth($icon, 3);
+      &:before{
+        content: nth($icon, 2); 
+      }
+    }
+  }
+}

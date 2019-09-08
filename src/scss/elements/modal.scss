@@ -1,0 +1,21 @@
+.modal {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+    border-radius: 0;
+    overflow: hidden;
+    padding-top: 2rem;
+    .close{
+        position: absolute;
+        right: 1rem;
+        top: 0.6rem;
+        z-index: 2;
+    }
+}
+
+.max-width{
+  max-width: 50rem;
+  margin: auto;
+}

@@ -1,0 +1,245 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0!important;
+  padding: 0;
+  li{
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #000;
+    @extend %anim;
+    &.slick-active{
+      background: $c-orange;
+    }
+    &:hover{
+      background: $c-orange
+    }
+    button {
+      display: none;
+    }
+  }
+}
+
+.left-part {
+  .slick-dots {
+    justify-content: flex-end;
+  }
+}
+.right-part {
+  .slick-dots {
+    justify-content: flex-start;
+  }
+  .text-block {
+    justify-content: flex-end;
+    display: flex;
+  }
+  @media(max-width:991px) {
+    .slick-dots {
+      justify-content: flex-end;
+    }
+    & > .row {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.slick-gallery{
+  overflow: hidden;
+  &__full{
+    .slick-slide{
+      outline: none;
+      margin-bottom: 0.2rem;
+      figure{
+        margin-bottom: 0;
+        display: block!important;
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    .slick-arrow{
+      font-size: 0;
+      border: 0;
+      height: 2.2rem;
+      width: 2.2rem;
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 100%;
+      background: rgba(49, 49, 49, 0.8);
+      opacity: 0.5;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      color: #fff;
+      @extend %anim;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  &__thumbnails{
+    margin: 0 -14px 0 0;
+    .slick-slide{
+      outline: none;
+      cursor: pointer;
+      background: #000;
+      margin: 14px 14px 0 0;
+      overflow: hidden;
+      @extend %bradius;
+      @extend %anim;
+      &.slick-current, &:hover{
+        background: $c-orange
+        img {
+          opacity: 0.65;
+        }
+      }
+    }
+
+  }
+}
+
+
+.rev-slider{
+  display: block;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin: 0 -15px;
+  &.slick-slider{
+    overflow: auto;
+  }
+  .rev-block{
+    width: 50%;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: text-top;
+    @media(max-width:991px) {
+      width: 100%;
+    }
+  }
+}
+
+
+.pic-slider{
+  display: block;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  .pic-block{
+    white-space: normal;
+    display: inline-block;
+    vertical-align: text-top;
+  }
+}

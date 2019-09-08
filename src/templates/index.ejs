@@ -1,15 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Demo Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  </head>
-  <body>
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./assets/jquery.mask.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./assets/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var widgetOptions = {
+      token: '5F47E355-0D2C-4828-8D26-8A0FA5421AED',
+      css: 'http://tuchkovo-club.ru/default.css',
+      target: 'search-widget',
+      popupHeader: '',
+      maxAdults: 10,
+      widget_width: 968,
+      align: 'left',
+      showGuestsCount: true,
+      showChildren: false,
+      minAge: 1,
+      maxAge: 17,
+      method: 'popup',
+      showAllIfNotExists: true,
+      usePaygate: true,
+      defLength: 1,
+      defAdults: 2,
+      alwaysShowTariff: false,
+      expanded: false,
+      showHours: false,
+      periodText: 'Выберите даты',
+      allowOverbooking: false
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'http://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+  </script>
+
+</head>
+<body>
+  <div class="main">
     <%- include modules/header.ejs %>
-    <div class="container mt-3 text-center">
-      <h1>Home</h1>
-      <img src="/assets/img/webpack.png" alt="">
+  </div>
+  <div id="sliderMain" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column-reverse flex-lg-row align-items-center">
+          <div class="slider-text">
+            <p class="text-white txt_40px text-center slider-text__header">Отпуск в Tuchkvo-club!<br>Длительное проживание</p>
+            <p class="text-white slider-text__text">Для тех, кто приезжает в Загородный клуб «Тучково» провести отпуск: побыть на природе,
+              уединиться или, наоборот, весело отдохнуть всей семьёй, мы подготовили сюрприз.</p>
+            <p class="text-center"><a class="btn white mt-3 mx-auto"  href="#">Узнать подробнее</a></p>
+          </div>
+          <img class="d-block w-100" src="./assets/img/img.png" alt="">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column-reverse flex-lg-row align-items-center">
+          <div class="slider-text">
+            <p class="text-white txt_40px text-center slider-text__header">Отпуск в Tuchkvo-club!<br>Длительное проживание</p>
+            <p class="text-white slider-text__text">Для тех, кто приезжает в Загородный клуб «Тучково» провести отпуск: побыть на природе,
+              уединиться или, наоборот, весело отдохнуть всей семьёй, мы подготовили сюрприз.</p>
+            <p class="text-center"><a class="btn white mt-3 mx-auto"  href="#">Узнать подробнее</a></p>
+          </div>
+          <img class="d-block w-100" src="./assets/img/img.png" alt="">
+        </div>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#sliderMain" data-slide-to="0" class="active">1 Отпуск в Tuchkvo-club!</li>
+        <li data-target="#sliderMain" data-slide-to="1">2 Лето в разгаре</li>
+      </ol>
     </div>
-  </body>
+  </div>
+
+  <section class="pic1">
+    <div class="pt-5 pic2">
+
+      <div class="container main-search-widget">
+        <div id="search-widget"></div>
+      </div>
+      <div class="container">
+        <%- include modules/main.ejs %>
+
+        <div class="d-flex align-items-center justify-content-end">
+          <div class="rev-slider-dots mb-3 mr-4"></div>
+          <p class="txt_40px my-5">Спецпредложения</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="wood-block py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <form action="#" class="pt-3 mb-4">
+            <p class="txt_22px text-white mb-1">Оставьте заявку</p>
+            <p class="txt_16px text-white mb-4">на обратный звонок</p>
+            <input type="text" name="name" placeholder="Ваше Имя" class="w-100 mb-3 white">
+            <input type="phone" name="phone" placeholder="Ваш телефон" class="w-100 mb-3 white">
+            <button class="btn orange mt-3" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+        <div class="col-lg-8">
+
+          <div class="rev-slider">
+            <div class="rev-block">
+              <div class="spec-item bg-block">
+                <div class="info">
+                  <a href="#" class="txt_22px text-white mb-1 d-block">Именинникам</a>
+                  <p class="txt_16px txt-c-orange mb-4">(с 20.05.2019 по 31.08.2019)</p>
+                </div>
+                <img class="bg-block__img" src="./assets/img/img.png" alt="">
+              </div>
+            </div>
+            <div class="rev-block">
+              <div class="spec-item bg-block">
+                <div class="info">
+                  <a href="#" class="txt_22px text-white mb-1 d-block">Именинникам</a>
+                  <p class="txt_16px txt-c-orange mb-4">(с 20.05.2019 по 31.08.2019)</p>
+                </div>
+                <img class="bg-block__img" src="./assets/img/img.png" alt="">
+              </div>
+            </div>
+            <div class="rev-block">
+              <div class="spec-item bg-block">
+                <div class="info">
+                  <a href="#" class="txt_22px text-white mb-1 d-block">Именинникам</a>
+                  <p class="txt_16px txt-c-orange mb-4">(с 20.05.2019 по 31.08.2019)</p>
+                </div>
+                <img class="bg-block__img" src="./assets/img/img.png" alt="">
+              </div>
+            </div>
+            <div class="rev-block">
+              <div class="spec-item bg-block">
+                <div class="info">
+                  <a href="#" class="txt_22px text-white mb-1 d-block">Именинникам</a>
+                  <p class="txt_16px txt-c-orange mb-4">(с 20.05.2019 по 31.08.2019)</p>
+                </div>
+                <img class="bg-block__img" src="./assets/img/img.png" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-5 pic3">
+    <%- include modules/l-block.ejs %>
+    <%- include modules/r-block.ejs %>
+    <%- include modules/l-block.ejs %>
+  </div>
+
+  <section class="wood-block py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <p class="text-white txt_40px">Новости</p>
+          <a class="text-white txt_16px" href="#">читать все</a>
+          <p class="txt-c-orange txt_16px my-4">18 января 2019</p>
+          <p class="text-white">Гостиничный комплекс располагает комфортными номерами и коттеджами, в которых одновременно смогут разместиться до 150 гостей. На территории загородного клуба работают рестораны «LaMachta» и «Маяк», </p>
+          <a class="btn white mt-3 mx-auto"  href="#">Узнать подробнее</a>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="video-item bg-block">
+            <div class="info">
+              <a href="#" class="d-block m-auto text-center decoration-none py-3">
+                <span class="txt_40px text-white">Видео</span> <br>
+                <span class="txt_16px text-white">про наш клуб</span> <br> <br>
+                <img src="./assets/img/play.png" alt="">
+              </a>
+
+            </div>
+            <img class="bg-block__img" src="./assets/img/img.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <p class="text-white txt_40px">Отзывы</p>
+          <a class="text-white txt_16px" href="#">читать все</a>
+          <p class="txt-c-orange txt_16px my-4">18 января 2019</p>
+          <p class="text-white">Гостиничный комплекс располагает комфортными номерами и коттеджами, в которых одновременно смогут разместиться до 150 гостей.</p>
+          <a class="btn white mt-3 mx-auto"  href="#">Узнать подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-5 pic4">
+    <%- include modules/r-block.ejs %>
+    <%- include modules/l-block.ejs %>
+    <%- include modules/r-block.ejs %>
+  </div>
+
+
+  <%- include modules/footer.ejs %>
+
+</body>
 </html>

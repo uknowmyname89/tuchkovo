@@ -22,6 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.0.0",
     "copy-webpack-plugin": "^4.5.0",
     "cross-os": "^1.2.3",

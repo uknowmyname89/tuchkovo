@@ -1,0 +1,12 @@
+.footer{
+  .navbar-nav{
+    display: block;
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      a{
+        color: $c-black;
+      }
+    }
+  }
+}
