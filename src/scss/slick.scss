@@ -164,30 +164,6 @@
         }
       }
     }
-
-    .slick-arrow{
-      font-size: 0;
-      border: 0;
-      height: 2.2rem;
-      width: 2.2rem;
-      cursor: pointer;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      border-radius: 100%;
-      background: rgba(49, 49, 49, 0.8);
-      opacity: 0.5;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      color: #fff;
-      @extend %anim;
-      &:hover{
-        opacity: 1;
-      }
-    }
   }
   &__thumbnails{
     margin: 0 -14px 0 0;
@@ -200,7 +176,7 @@
       @extend %bradius;
       @extend %anim;
       &.slick-current, &:hover{
-        background: $c-orange
+        background: $c-orange;
         img {
           opacity: 0.65;
         }

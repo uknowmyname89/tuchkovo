@@ -1,0 +1,52 @@
+/*
+ * Load modules
+ */
+
+@import "gallery";
+
+
+/*
+ * Common object's stylesheets
+ */
+
+.object{
+  &__img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+  }
+  &__gallery{
+    display: flex;
+    margin: 0 -0.3rem;
+    &__item{
+      margin: 0 0.3rem;
+      img{
+        height: 7rem;
+        object-fit: cover;
+      }
+    }
+  }
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.icon-exist{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  &__img {
+    width: 2.2rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    img {
+
+    }
+  }
+  span {
+    color: $gray-600;
+  }
+}

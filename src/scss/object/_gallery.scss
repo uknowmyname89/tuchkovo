@@ -1,0 +1,38 @@
+.object-gallery{
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 3rem;
+  flex-direction: column;
+  .slick-gallery {
+    &__full{
+      .slick-slide{
+        *{
+          height: 100%;
+        }
+        img{
+          position: relative;
+          padding: 0;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        padding: 0 1rem;
+      }
+    }
+    &__thumbnails{
+      .slick-slide{
+        img{
+          display: block;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}

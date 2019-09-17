@@ -51,6 +51,37 @@ h3{
   z-index: 1;
 }
 
+
+ol{
+  counter-reset: myCounter;
+  padding-left: 0;
+  li{
+    list-style: none;
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+  li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: $gray-500;
+    background: #eee;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 100%;
+    font-size: $txt_12px;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+
+
 .decoration-none{
   text-decoration: none;
 }
@@ -147,6 +178,9 @@ h3{
   max-width: 1680px;
   margin: auto;
   padding: 0 1rem;
+}
+.gray-block{
+  background: $gray-100;
 }
 .max-top-text{
   max-width: 55rem;
