@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./assets/jquery.mask.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./assets/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var widgetOptions = {
+      token: '5F47E355-0D2C-4828-8D26-8A0FA5421AED',
+      css: 'http://tuchkovo-club.ru/default.css',
+      target: 'search-widget',
+      popupHeader: '',
+      maxAdults: 10,
+      widget_width: 968,
+      align: 'left',
+      showGuestsCount: true,
+      showChildren: false,
+      minAge: 1,
+      maxAge: 17,
+      method: 'popup',
+      showAllIfNotExists: true,
+      usePaygate: true,
+      defLength: 1,
+      defAdults: 2,
+      alwaysShowTariff: false,
+      expanded: false,
+      showHours: false,
+      periodText: 'Выберите даты',
+      allowOverbooking: false
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'http://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+  </script>
+
+</head>
+<body>
+<div class="main">
+  <%- include modules/header.ejs %>
+</div>
+<div class="inner-search-widget">
+  <div class="container">
+    <div id="search-widget"></div>
+  </div>
+</div>
+
+<section class="pic5">
+  <div class="py-5 pic4">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Главная</a> <span class="mx-2">/</span> О компании
+      </div>
+      <h1>Контакты</h1>
+
+      <div class="row">
+        <div class="col-md-3">
+          <p>143130, Московская область, Рузский район, пгт.Тучково, ул Загородная, дом 1</p>
+          <p class="mt-4 font-weight-bold mb-1">GPS-координаты:</p>
+          <p class="mb-3">55.6057684 36.506258</p>
+          <p class="font-weight-bold mb-1">Ресепшн</p>
+          <p class="txt_12px mb-3">+7 495 107-91-55 +7 495 600-44-06</p>
+          <p class="font-weight-bold mb-1">Отдел бронирования</p>
+          <p class="txt_12px mb-3">+7 916 870-20-50 <a href="mailto:pmberega@gmail.com">pmberega@gmail.com</a></p>
+          <p class="font-weight-bold mb-1">Банкетная служба</p>
+          <p class="txt_12px mb-3">+7 958 594-60-28 <a href="mailto:pmberega@gmail.com">pmberega@gmail.com</a></p>
+        </div>
+        <div class="col-md-9">
+          <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+          <div id="map" class="h-100" data-lat="55,6057684" data-lon="36,506258" data-zoom="14"></div>
+        </div>
+      </div>
+
+
+      <p class="txt_22px my-4 font-weight-bold">Как добраться</p>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Дорога на электропоезде:</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Дорога на автомобиле:</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Представительство в Москве:</a>
+        </div>
+      </nav>
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane active">
+          <p>от Белорусского вокзала до станции "Тучково" (время в пути 1 час 20 минут). Далее - такси (1,5 км).</p>
+        </div>
+        <div id="tab2" class="tab-pane fade">
+          <p>от МКАД до клуба - 67 км. Следовать по Минскому шоссе
+            57км до поворота направо по указателю ТУЧКОВО. Далее следовать до
+            пгт.Тучково и по главной дороге через пгт.Тучково до Т-образного
+            перекрестка - повернуть направо на ЗВЕНИГОРОД; через 400 м - повернуть
+            направо к магазину "Дикси" и следовать по указателям "Загородный клуб
+            Тучково".</p>
+        </div>
+
+        <div id="tab3" class="tab-pane fade">
+          <p>Станция метро "Первомайская", улица 9-я Парковая, дом 39, офис 8.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%- include modules/footer.ejs %>
+
+</body>
+</html>
+

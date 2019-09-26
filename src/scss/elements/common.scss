@@ -199,7 +199,7 @@ ol{
   display: flex;
   justify-content: center;
   width: fit-content;
-  background: $c-orange;
+  background: #eee;
   margin: 0 0 2rem;
   border-bottom: 0;
   overflow: hidden;
@@ -217,10 +217,11 @@ ol{
       color: $c-black !important;
     }
     @media(max-width:767px) {
-      padding: 0.5rem 0rem;
+      padding: 1rem;
       width: 100%;
-      text-align: center;
-      border: 1px solid transparent!important;
+      text-align: left;
+      border: 1px solid transparent !important;
+      border-bottom: 2px solid #fff!important;
     }
     + .nav-item{
       @media(max-width:768px) {
