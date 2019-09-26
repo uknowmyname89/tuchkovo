@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./assets/jquery.mask.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./assets/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var widgetOptions = {
+      token: '5F47E355-0D2C-4828-8D26-8A0FA5421AED',
+      css: 'http://tuchkovo-club.ru/default.css',
+      target: 'search-widget',
+      popupHeader: '',
+      maxAdults: 10,
+      widget_width: 968,
+      align: 'left',
+      showGuestsCount: true,
+      showChildren: false,
+      minAge: 1,
+      maxAge: 17,
+      method: 'popup',
+      showAllIfNotExists: true,
+      usePaygate: true,
+      defLength: 1,
+      defAdults: 2,
+      alwaysShowTariff: false,
+      expanded: false,
+      showHours: false,
+      periodText: 'Выберите даты',
+      allowOverbooking: false
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'http://pms.frontdesk24.ru/BookingWidgetFront/Scripts/widget.js';
+      document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+  </script>
+
+</head>
+<body>
+<div class="main">
+  <%- include modules/header.ejs %>
+</div>
+<div class="inner-search-widget">
+  <div class="container">
+    <div id="search-widget"></div>
+  </div>
+</div>
+
+<section class="pic5">
+  <div class="py-5 pic4">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Главная</a> <span class="mx-2">/</span> Коттедж
+      </div>
+      <h1>Рестораны</h1>
+
+      <div class="pic-block left-part">
+        <div class="row">
+          <div class="col-lg-4 mb-3">
+            <div class="row align-items-center">
+              <div class="col-lg-10">
+                <div class="pic-slider">
+                  <div class="pic-block">
+                    <img class="img-fluid" src="./assets/img/img.png" alt="">
+                  </div>
+                  <div class="pic-block">
+                    <img class="img-fluid" src="./assets/img/img.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 d-none d-lg-block pl-0">
+                <img class="img-fluid pb-5" src="./assets/img/plantl.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h2>Ресторан МАЯК</h2>
+            <p>На берегу Москва-реки уютно расположился Ресторан «Маяк». Восхитительный вид на Москву-реку, широкая палуба, ухоженная поляна, европейская кухня к Вашим Услугам. Ресторан «Маяк» идеально подходит для празднования мероприятий до 60 человек.</p>
+            <p>Проведение мероприятий от 80 человек и до 300 на поляне перед рестораном.</p>
+            <a href="#">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-5">
+      <div class="pic-block left-part">
+        <div class="row">
+          <div class="col-lg-4 mb-3">
+            <div class="row align-items-center">
+              <div class="col-lg-10">
+                <div class="pic-slider">
+                  <div class="pic-block">
+                    <img class="img-fluid" src="./assets/img/img.png" alt="">
+                  </div>
+                  <div class="pic-block">
+                    <img class="img-fluid" src="./assets/img/img.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 d-none d-lg-block pl-0">
+                <img class="img-fluid pb-5" src="./assets/img/plantl.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <h2>Ресторан Терраса</h2>
+            <p>На берегу Москва-реки уютно расположился Ресторан «Маяк». Восхитительный вид на Москву-реку, широкая палуба, ухоженная поляна, европейская кухня к Вашим Услугам. Ресторан «Маяк» идеально подходит для празднования мероприятий до 60 человек.</p>
+            <p>Проведение мероприятий от 80 человек и до 300 на поляне перед рестораном.</p>
+            <a href="#">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include modules/footer.ejs %>
+
+</body>
+</html>
+

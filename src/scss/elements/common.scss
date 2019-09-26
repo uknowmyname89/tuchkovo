@@ -316,6 +316,9 @@ ol{
         opacity: 1;
         color: $c-orange;
       }
+      &:before{
+        display: none;
+      }
       @media(max-width:991px) {
         text-indent: -999px;
         border: 2px solid #fff;
@@ -323,6 +326,8 @@ ol{
         height: 10px;
         margin: 5px;
         border-radius: 100%;
+        flex: 0;
+        height: 20px;
         &:hover, &.active{
           background: #fff;
         }

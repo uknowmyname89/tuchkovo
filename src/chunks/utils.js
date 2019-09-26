@@ -106,6 +106,29 @@ $(function () {
     })
   });
 
+  $('.inner-slider').each(function(){
+    $(this).slick({
+      dots: true,
+      dotsClass: 'slick-dots',
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      arrows : false,
+      slidesToScroll: 4,
+      autoplay: true,
+      appendDots: $('.inner-slider-dots'),
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+      ]
+    })
+  });
+
   $('.pic-slider').each(function(){
     $(this).slick({
       dots: true,
