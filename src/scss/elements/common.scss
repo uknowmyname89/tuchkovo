@@ -172,6 +172,9 @@ ol{
   background: url($path-assets + '/img/wt.jpg') no-repeat top center fixed;
   background-size: cover;
   box-shadow: inset 0px 4px 100px #000000;
+  @media(max-width:768px) {
+    background-attachment: local!important;
+  }
 }
 
 .max-block{
