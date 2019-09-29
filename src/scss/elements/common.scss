@@ -118,7 +118,6 @@ ol{
 }
 .main-search-widget{
   margin: -6rem auto 5rem;
-  overflow: hidden;
   @media(max-width:991px) {
     margin: 1rem auto 5rem;
   }
@@ -327,11 +326,11 @@ ol{
         text-indent: -999px;
         border: 2px solid #fff;
         width: 10px;
-        height: 10px;
         margin: 5px;
         border-radius: 100%;
-        flex: 0;
-        height: 20px;
+        flex: 0 0 auto;
+        height: 10px;
+        padding: 0.3rem;
         &:hover, &.active{
           background: #fff;
         }
