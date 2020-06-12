@@ -123,9 +123,18 @@ ol{
   }
 }
 .inner-search-widget{
-  overflow: hidden;
   background: $c-orange;
 }
+#search-widget {
+  @media(max-width:768px) {
+    left: 0;
+  }
+}
+
+#search-widgetplace-holder {
+  max-width: 100%;
+}
+
 .white-block{
   background: #fff;
 }
@@ -424,3 +433,5 @@ ul {
 }
 
 @media print { body { -webkit-print-color-adjust: exact; } }
+
+
